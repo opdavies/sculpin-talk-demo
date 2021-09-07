@@ -1,11 +1,9 @@
 {% extends 'app' %}
 
 {% block body %}
-    <nav>
-        {% for link in site.main_menu %}
-            <a href="{{ link.href }}">{{ link.title }}</a>
-        {% endfor %}
-    </nav>
+    {% include 'navbar' with {
+        links: site.main_menu,
+    } only %}
 
     <h1>{{ page.title }}</h1>
 
