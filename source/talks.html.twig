@@ -1,5 +1,15 @@
 ---
 title: Talks
 layout: default
+use: [talks]
 ---
 
+<ul>
+    {% for talk in data.talks %}
+        <li>
+            <a href="{{ talk.url }}">
+                {{ talk.title }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
