@@ -1,4 +1,22 @@
 {% extends 'default' %}
 
 {% block content_bottom %}
+    {% set events = page.events %}
+
+    {% if not events is empty %}
+        <h2>Events</h2>
+
+        <ul>
+            {% for event in events %}
+                <li>
+                    {% if event.url %}
+                        <a href="{{ event.url }}">{{ event.name }}</a>
+                    {% else %}
+                        {{ event.name }}
+                    {% endif %}
+                    - {{ event.date|date('jS F Y') }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endblock %}
