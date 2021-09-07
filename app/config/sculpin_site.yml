@@ -1,2 +1,9 @@
 name: Sculpin Demo
 locale: en
+main_menu:
+    -
+        title: Home
+        href: /
+    -
+        title: Talks
+        href: /talks/

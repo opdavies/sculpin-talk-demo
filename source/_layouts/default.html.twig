@@ -1,5 +1,11 @@
 {% extends 'app' %}
 
 {% block body %}
+    <nav>
+        {% for link in site.main_menu %}
+            <a href="{{ link.href }}">{{ link.title }}</a>
+        {% endfor %}
+    </nav>
+
     {% block content %}{% endblock %}
 {% endblock %}
